@@ -1,0 +1,14 @@
+body {
+    color: hotpink;/* Sets default text color for the page*/
+    background-color: pink;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-align: center;}
+img {
+    border-radius: 50%;
+    border: solid 5px hotpink;
+div {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;}}
+    
