@@ -1,0 +1,66 @@
+
+
+@import url('<https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap>');
+
+
+/* Styles par défaut - mobile d'abord */
+.card {
+ display: flex;
+ flex-direction: column;
+ padding: 1rem;
+}
+/* Tablettes : au-dessus de 768px */
+@media (min-width: 768px) {
+ .card {
+ flex-direction: row;
+ gap: 1rem;
+ }
+}
+/* Ordinateurs : au-dessus de 1024px */
+@media (min-width: 1024px) {
+ .card {
+ padding: 2rem;
+ max-width: 900px;
+ margin: auto;
+ }
+}
+
+body {
+  margin: auto;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.5rem;
+}
+
+h1 {
+  margin-bottom: 0;
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Le container qui contient toutes les images */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Chaque image dans le container */
+.container img {
+  flex: 1 1 300px;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+}

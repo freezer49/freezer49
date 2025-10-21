@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap");
+
+/*Je souhaite rendre ma page responsive */
+
+/* Styles par défaut - mobile d'abord */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+/* Je souhaite modifier la taille du logo*/
+
+.logo-img {
+  width: 25%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+/* Je souhaite ajouter du style à mon bouton */
+
+.email-form {
+  display: flex;
+  max-width: 300px;
+  margin: 2rem auto;
+}
+
+.email-form input {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid hsl(0, 36%, 70%);
+  border-radius: 25px;
+  outline: none;
+}
+
+/* Je souhaite ajouter la couleur et la forme de mon bouton*/
+
+.button-arrow {
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border: none;
+  border-radius: 25px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+}
+
+.button-arrow-svg {
+  width: 15px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.email-form button {
+  margin-left: -50px; /* Pour superposer le bouton sur l'input */
+  z-index: 1;
+}
+/* Je souhaite faire en sorte que mon image prenne toute la place */
+
+.responsive-mobile-img {
+  width: 100vw;
+  margin-left: 0;
+  margin-right: 0;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+/* Cacher l'image desktop en mobile */
+.responsive-desktop-img {
+  display: none;
+}
+/* Je souhaite modifier mon texte pour l'adapter au mobile */
+
+h1 {
+  margin-bottom: 0%;
+  font-family: "Josefin Sans", sans-serif;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  font-weight: lighter;
+  font-weight: 400;
+}
+
+h2 {
+  margin-top: 0%;
+  font-family: "Josefin Sans", sans-serif;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+  font-weight: 600;
+}
+
+p {
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+  letter-spacing: 0;
+  color: hsl(0, 36%, 70%);
+  text-align: center;
+  margin-left: 55px;
+  margin-right: 55px;
+  font-weight: 300;
+}
+
+/* Desktop */
+/* Ordinateurs : au-dessus de 1024px */
+@media (min-width: 1024px) {
+  .card {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .card-img {
+    width: 35%;
+    max-width: 350px;
+    height: 300px;
+  }
+  /* Cacher l'image mobile */
+
+  .responsive-mobile-img {
+    display: none;
+  }
+
+  .responsive-desktop-img {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 45%;
+    height: 100vh;
+    object-fit: cover;
+    /* Ajuster le contenu */
+  }
+
+  /* Je souhaite modifier mon texte pour l'adapté au desktop */
+
+  h1 {
+    margin-bottom: 0%;
+    font-family: "Josefin Sans";
+    letter-spacing: 0.5rem;
+    text-align: left;
+    font-weight: 400, thin;
+    margin-left: 150px;
+  }
+
+  h2 {
+    margin-top: 0%;
+    font-family: "Josefin Sans", sans-serif;
+    letter-spacing: 0.5rem;
+    text-align: left;
+    font-weight: bold;
+    font-weight: 700px;
+    margin-left: 150px;
+  }
+
+  p {
+    margin: 0;
+    font-family: "Josefin Sans";
+    letter-spacing: 0;
+    color: hsl(0, 36%, 70%);
+    text-align: left;
+    margin-left: 150px;
+    margin-right: 600px;
+    font-weight: 300;
+    font-size: 16px;
+  }
+  /* Je souhaite modifier la taille du logo*/
+
+  .logo-img {
+    width: 10%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-left: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  /* Je souhaite ajouter du style à mon bouton */
+
+  .email-form {
+    display: flex;
+    max-width: 300px;
+    margin-left: 150px;
+    margin-right: 400px;
+  }
+
+  .email-form input {
+    flex: 1;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid hsl(0, 36%, 70%);
+    border-radius: 25px;
+    outline: none;
+  }
+
+  /* Je souhaite ajouter la couleur et la forme de mon bouton*/
+
+  .button-arrow {
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border: none;
+    border-radius: 25px;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+  }
+
+  .button-arrow-svg {
+    width: 15px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+  }
+
+  .email-form button {
+    margin-left: -50px; /* Pour superposer le bouton sur l'input */
+    z-index: 1;
+  }
+}
+
+/* Je souhaite ajouter une image de fond au site*/
+
+body {
+  background: url("base-apparel-coming-soon-master/images/bg-pattern-desktop.svg")
+    no-repeat center center/cover fixed;
+}
+
+/* Tablettes : au-dessus de 768px */
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .card-img {
+    width: 40%;
+    max-width: 300px;
+    height: 250px;
+  }
+}
