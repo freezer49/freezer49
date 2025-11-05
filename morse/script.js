@@ -44,31 +44,24 @@ const latinToMorse = {
 // Tester la fonction en lui donnant en paramètre “A”, et assurez-vous qu’elle renvoie bien .-.
 
 function translateLatinCharacter(character) {
-  // Retourne la correspondance en morse pour une lettre latine.
-  // Si le caractère n'est pas présent dans le dictionnaire, on renvoie undefined.
   if (!character) return undefined;
   return latinToMorse[character.toUpperCase()];
 }
 
 // étape 3
+// Créer une fonction encode qui prend en paramètre du texte et renvoie la traduction en morse.
+
 function encode(text) {
-  const array = []; // faire un tableau vide pour stocker le résultat
-  const splittedText = getLatinCharacterList(text); // stocker le texte séparé grâce à la fonction dans une variable
+  const array = [];
+  const splittedText = getLatinCharacterList(text);
   for (let i = 0; i < splittedText.length; i++) {
-    // boucler sur le texte
     if (splittedText[i] == " ") {
-      // gérer le cas où le caractère est un espace
-      array.push("/"); // si c'en est un, alors mettre un / dans le tableau "array" pour représenter l'espace
+      array.push("/");
     } else {
-      // si non, traduire le texte directement en morse grâce à la fonction
-      // Protection : si la traduction est inconnue, on l'ignore pour éviter d'insérer "undefined".
       const morse = translateLatinCharacter(splittedText[i]);
       if (morse !== undefined) {
         array.push(morse);
       } else {
-        // caractère non traduit (ponctuation, chiffre non présent, etc.)
-        // On choisit de l'ignorer pour garder la sortie lisible en morse.
-        // Si vous préférez conserver le caractère tel quel, remplacez cette ligne par : array.push(splittedText[i]);
       }
     }
   }
@@ -115,7 +108,6 @@ function getMorseCharacterList(text) {
 
 // fonction pour traduire chaque morse en lettre
 function translateMorseCharacter(character) {
-  // Retourne la lettre latine correspondante au code morse.
   // Si le code morse n'existe pas dans le dictionnaire, retourne undefined.
   if (!character) return undefined;
   return morseToLatin[character];
@@ -123,18 +115,17 @@ function translateMorseCharacter(character) {
 
 // décoder de morse à texte
 function decode(text) {
-  const array = []; // initialiser un tableau pour stocker mon résultat
+  const array = [];
 
-  const splittedText = getMorseCharacterList(text); // stocker le texte séparé grâce à la fonction dans une variable
+  const splittedText = getMorseCharacterList(text);
 
   for (let i = 0; i < splittedText.length; i++) {
     // boucler sur le texte
     if (splittedText[i] == "/") {
       // gérer le cas où le morse est un /
-      array.push(" "); // auquel cas, alors mettre un espace dans le tableau "array"
+      array.push(" ");
     } else {
       // sinon traduire du morse au texte
-      // Protection : vérifier que la traduction existe avant d'appeler toLowerCase().
       const letter = translateMorseCharacter(splittedText[i]);
       if (letter !== undefined) {
         array.push(letter.toLowerCase());

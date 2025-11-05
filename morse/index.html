@@ -5,6 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <h1>Traducteur de Morse</h1>
+    <textarea
+      id="inputText"
+      rows="8"
+      cols="100"
+      placeholder="Saisissez du texte ou du code Morse ici..."
+    ></textarea>
+    <br />
+    <button id="encodeButton">Encodage en Morse</button>
+    <button id="decodeButton">Décoder du morse</button>
+    <h2>La traduction :</h2>
+    <textarea id="outputText" rows="8" cols="100" readonly></textarea>
+
+    <script>
+      document
+        .getElementById("encodeButton")
+        .addEventListener("click", function () {
+          // La fonction se déclenche au clic
+          const input = document.getElementById("inputText").value; // recuperer le texte saisi
+          const output = encode(input); // appeler la fonction encode
+          document.getElementById("outputText").value = output; // afficher le résultat
+        });
+
+      document
+        .getElementById("decodeButton")
+        .addEventListener("click", function () {
+          const input = document.getElementById("inputText").value;
+          const output = decode(input);
+          document.getElementById("outputText").value = output;
+        });
+    </script>
+  </body>
 </html>
