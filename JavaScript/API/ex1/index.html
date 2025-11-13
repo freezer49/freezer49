@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<!-- créer une page web qui affiche les infos d’une donnée en particulier (un post ou une offre par exemple), plutôt qu’afficher la liste entière. -->
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document</title>
+  </head>
+  <body>
+    <!-- structure HTML -->
+    <header>
+      <h1>Afficher une info</h1>
+    </header>
+    <!-- Un élément input de type "number" avec un id (pour que l'utilisateur tape un numéro) -->
+    <input type="number" id="data-id" placeholder="Entrez un numéro" />
+    <button id="fetch-button">Déclencher la recherche</button>
+    <main id="data-display">
+      <div id="result"></div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
