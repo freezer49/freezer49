@@ -8,7 +8,7 @@ const resultDiv = document.getElementById("result");
 // Stocker tout ça dans une variable
 
 async function fetchDataById(id) {
-  const response = await fetch("https://dummyjson.com/posts/" + id);
+  const response = await fetchhttps://dummyjson.com/recipes
   const data = await response.json();
   return data;
 }
