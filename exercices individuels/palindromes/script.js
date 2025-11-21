@@ -47,11 +47,11 @@ function isDatePalindrome(dateString) {
 
 // Créer une fonction getNextPalindromes qui donne les x prochaines dates palindromes à compter d'aujourd'hui. La fonction prendra le x en paramètre.
 
-function getNextPalindromes(x) {
+function getNextPalindromes(count) {
   let result = [];
   let date = new Date();
 
-  while (result.length < x) {
+  while (result.length < count) {
     // Formatte juste la date
     let dateString = date.toLocaleDateString("fr-FR");
 
