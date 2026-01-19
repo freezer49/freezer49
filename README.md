@@ -27,7 +27,7 @@ Développeuse en apprentissage chez Ada Tech School.
 </tr></table>
 
 ## 📊 Statistiques GitHub
-![Statistiques GitHub](https://github-readme-stats.vercel.app/api?username=freezer&show_icons=true&theme=radical)
+![Statistiques GitHub](https://github-readme-stats.vercel.app/api?username=freezer49&show_icons=true&theme=radical)
 
 ---
 
