@@ -27,25 +27,25 @@ Développeuse en apprentissage chez Ada Tech School.
 </tr></table>
 
 ## 📊 Statistiques GitHub
-![Statistiques GitHub](https://github-readme-stats.vercel.app/api?username=freezer&show_icons=true&theme=radical)
+![Statistiques GitHub](https://github-readme-stats.vercel.app/api?username=freezer49&show_icons=true&theme=radical)
 
 ---
 
 <table><tr>
 <td valign="top">
 <h4>💻 Langages les plus utilisés</h4>
-<img alt="Langages les plus utilisés" src="https://github-readme-stats.vercel.app/api/top-langs/?username=freezer&layout=compact&theme=dracula" />
+<img alt="Langages les plus utilisés" src="https://github-readme-stats.vercel.app/api/top-langs/?username=freezer49&layout=compact&theme=dracula" />
 </td>
 <td valign="top">
 <h4>🔥 Série de contributions</h4>
-<img alt="Série de contributions" src="https://streak-stats.demolab.com?user=freezer&theme=dracula&hide_border=true" />
+<img alt="Série de contributions" src="https://streak-stats.demolab.com?user=freezer49&theme=dracula&hide_border=true" />
 </td>
 </tr></table>
 
 ---
 
 ### 📈 Graphique d'activité
-![Graphique d'activité GitHub](https://github-readme-activity-graph.vercel.app/graph?username=freezer&theme=dracula)
+![Graphique d'activité GitHub](https://github-readme-activity-graph.vercel.app/graph?username=freezer49&theme=dracula)
 
 ## 🔗 Liens
 [![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white)](https://github.com/freezer49/)
