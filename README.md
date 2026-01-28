@@ -38,7 +38,7 @@ Développeuse en apprentissage chez Ada Tech School.
 </td>
 <td valign="top">
 <h4>🔥 Série de contributions</h4>
-<img alt="Série de contributions" src="https://streak-stats.demolab.com?user=freezer49&theme=dracula&hide_border=true" />
+<img alt="Série de contributions" src="https://streak-stats.demolab.com?username=freezer49&theme=dracula&hide_border=true" />
 </td>
 </tr></table>
 
