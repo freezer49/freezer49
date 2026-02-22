@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fr-FR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemple html et css</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header role="banner">
+      <nav>
+        <ul>
+          <li><a href="#titre">Titre</a></li>
+          <li><a href="#contenu">Contenu</a></li>
+          <li><a href="#footer">Footer</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 id="titre">Bienvenue sur mon site !!</h1>
+      <p id="contenu">Ceci est un contenu intéressant</p>
+      <form id="identify-form">
+        <h3>Identification</h3>
+        <label for="email">email*</label>
+        <input id="email" type="email" placeholder="votre email" />
+        <label for="nom">mdp*</label>
+        <input
+          id="mdp"
+          type="text"
+          placeholder="votre mdp"
+          required
+          minlength="8"
+        />
+      </form>
+      <br />
+      <form id="address-form">
+        <h3>Adresse et code postal</h3>
+        <label for="adresse">Adresse:</label>
+        <input id="adresse" type="text" placeholder="votre adresse" />
+        <label for="code postal">Code Postal:</label>
+        <input id="code postal" type="text" placeholder="votre code postal" />
+        <br />
+        <button form="identify-form" type="submit">Envoyer</button>
+      </form>
+    </main>
+    <footer id="footer" role="contentinfo">
+      <nav>
+        <ul>
+          <li><a href="#">Plan du site </a></li>
+          <li><a href="#">Mentions Légales</a></li>
+          <li><a href="#">Nous Contacter</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+  <script src="cours.js"></script>
+</html>

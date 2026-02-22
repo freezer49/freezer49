@@ -1,0 +1,30 @@
+header {
+  background-color: burlywood;
+  color: white;
+  padding: 10px;
+}
+
+#email {
+  font-size: 14px;
+  background-color: lightblue;
+}
+
+#adresse {
+  font-size: 14px;
+  background-color: coral;
+}
+
+label {
+  color: darkmagenta;
+  &:hover {
+    color: coral;
+  }
+}
+
+input {
+  border: 2px solid orangered;
+  padding: 5px;
+  &:focus {
+    border-color: blue;
+  }
+}
