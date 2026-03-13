@@ -12,13 +12,34 @@ const pokemons = [
   { id: 74, name: "geodude", type: "rock", hp: 40, weight: 200 },
   { id: 131, name: "lapras", type: "water", hp: 130, weight: 220 },
 ];
+
+// .length → nombre d'éléments du tableau
 console.log(pokemons.length);
 
+// .filter() → garde seulement les pokémon de type water
 const waterPokemons = pokemons.filter((pokemon) => pokemon.type === "water");
 console.log(waterPokemons);
 
+// .find() → retourne le premier pokémon qui correspond
 const pikachu = pokemons.find((pokemon) => pokemon.name === "pikachu");
 console.log(pikachu);
 
+// .sort() + spread operator → copie et trie par poids croissant
 const sortedByWeight = [...pokemons].sort((a, b) => a.weight - b.weight);
 console.log(sortedByWeight);
+
+// .reduce() → additionne tous les HP
+const totalHp = pokemons.reduce((acc, pokemon) => acc + pokemon.hp, 0);
+
+// division pour calculer la moyenne
+const averageHp = totalHp / pokemons.length;
+console.log(averageHp);
+
+// .map() → transforme chaque pokémon en carte HTML
+const cards = pokemons.map((pokemon) => `<div>${pokemon.name}</div>`);
+
+// .join() + innerHTML → injecte toutes les cartes dans la page
+document.querySelector("#grid").innerHTML = cards.join("");
+
+// Ce que tu as pratiqué :
+// .length · .filter() · .find() · .sort() · spread operator ... · .reduce() · .map() · .join() · innerHTML
