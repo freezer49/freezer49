@@ -35,22 +35,30 @@ function renderGrid(tableau) {
 
 renderGrid(pokemons);
 
-/////////
-
-// Filtre en temps réel :
-
-// écoute l'événement input sur searchInput
-// à chaque frappe, filtre pokemons par nom avec .filter()
-// réaffiche la grille avec renderGrid()
-
-// Indice :
-
-// searchInput.value donne le texte tapé dans l'input
-// .includes() vérifie si une string contient une autre string
-
+// écoute chaque frappe dans l'input
 searchInput.addEventListener("input", () => {
+  // filtre les pokémon dont le nom contient la valeur tapée
   const filtered = pokemons.filter((pokemon) =>
     pokemon.name.includes(searchInput.value),
   );
+  // réaffiche la grille avec le tableau filtré
   renderGrid(filtered);
 });
+
+// écoute les clics sur la grille (event delegation)
+grid.addEventListener("click", (event) => {
+  // toggle ajoute/retire la classe "selected" sur la carte cliquée
+  event.target.classList.toggle("selected");
+});
+
+// récupère le bouton effacer
+const clearButton = document.querySelector("#clear");
+
+// au clic, réaffiche tous les pokémon et vide l'input
+clearButton.addEventListener("click", () => {
+  renderGrid(pokemons);
+  searchInput.value = "";
+});
+
+// Ce que tu as pratiqué :
+// querySelector · addEventListener · event.target · classList.toggle() · innerHTML · event delegation
