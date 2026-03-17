@@ -1,6 +1,6 @@
 // EXERCICE 6 — Fetch & Async/Await
 
-// tableau d'objets pokémon avec const
+// données statiques de pokémon
 const pokemons = [
   { id: 1, name: "bulbasaur", type: "grass", hp: 45, weight: 69 },
   { id: 4, name: "charmander", type: "fire", hp: 39, weight: 85 },
@@ -14,14 +14,41 @@ const pokemons = [
   { id: 131, name: "lapras", type: "water", hp: 130, weight: 220 },
 ];
 
+// récupère le div qui affiche la carte pokémon
+const card = document.querySelector("#card");
+
+// appelle l'API et affiche le résultat dans card
 async function getPokemon(nameOrId) {
-  const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${nameOrId}`);
-  const data = await response.json();
-  return data;
+  card.textContent = "⏳ Chargement...";
+  try {
+    // fetch + vérification + conversion en JSON
+    const response = await fetch(
+      `https://pokeapi.co/api/v2/pokemon/${nameOrId}`,
+    );
+    if (!response.ok) {
+      throw new Error("Pokémon introuvable");
+    }
+    const data = await response.json();
+    card.textContent = data.name;
+    return data;
+  } catch (error) {
+    // affiche le message d'erreur dans la console
+    console.log(error.message);
+  }
 }
 
-async function test() {
-  const pokemon = await getPokemon("pikachu");
-  console.log(pokemon);
-}
-test();
+// récupère l'input et le bouton
+const searchInput = document.querySelector("#search");
+const searchButton = document.querySelector("#btn");
+
+// au clic, vérifie l'input puis lance la recherche
+searchButton.addEventListener("click", async () => {
+  if (searchInput.value.trim() === "") {
+    card.textContent = "⚠️ Tape un nom !";
+  } else {
+    await getPokemon(searchInput.value);
+  }
+});
+
+// Ce que tu as pratiqué :
+// async/await · fetch · try/catch · throw new Error · response.ok · trim() · addEventListener
