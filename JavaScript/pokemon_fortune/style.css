@@ -1,0 +1,100 @@
+body {
+  background-image: url(background.png);
+  background-size: cover;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0%;
+  padding: 0%;
+}
+
+#header {
+  background-color: #080e72;
+  padding: 16px 24px;
+}
+
+h1 {
+  color: #fefefe;
+}
+
+#layout {
+  display: flex;
+  gap: 16px;
+}
+
+#sidebar {
+  background-color: #fefefe;
+  border: 1px dashed #080e72;
+  width: 250px;
+  padding: 16px;
+  min-height: 100vh;
+}
+
+#main {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+#slot-frame {
+  width: 150px;
+  height: 150px;
+  background-color: #c4d1ed;
+  border-top: 3px solid #e8eef8;
+  border-left: 3px solid #e8eef8;
+  border-right: 3px solid #6a7a9f;
+  border-bottom: 3px solid #6a7a9f;
+  overflow: hidden;
+  margin: 0 auto 16px;
+}
+
+#btn {
+  background: #c4d1ed;
+  font-family: "Press Start 2P";
+  font-size: 7px;
+  width: 100%;
+  padding: 12px;
+  cursor: pointer;
+  color: #080e72;
+}
+
+#card {
+  border-top: 3px solid #e8d48a;
+  border-left: 3px solid #e8d48a;
+  border-right: 3px solid #8a6a10;
+  border-bottom: 3px solid #8a6a10;
+  background-color: #fefefe;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 280px;
+  outline: 3px solid #c9a84c;
+}
+
+#pokemon-image {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+#pokemon-name {
+  font-size: 10px;
+  color: #080e72;
+}
+
+#pokemon-type {
+  background: #080e72;
+  color: #fefefe;
+  font-size: 6px;
+  padding: 4px 16px;
+}
+
+#pokemon-message {
+  font-family: "VT323", monospace;
+  font-size: 18px;
+  color: #080e72;
+  text-align: center;
+}
