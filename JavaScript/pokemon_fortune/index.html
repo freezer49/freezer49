@@ -20,25 +20,44 @@
   </head>
   <body>
     <div id="header">
+      <span class="sparkle">✦</span>
+      <span class="sparkle">✦</span>
+      <span class="sparkle">✦</span>
+      <span class="sparkle">✦</span>
       <h1>[ Pokémon Fortune ]</h1>
-    </div>
-    <div id="layout">
-      <div id="sidebar">
-        <div id="slot-frame"></div>
-        <button id="btn">▶ LANCER LA ROULETTE ◀</button>
+      <div id="tabs">
+        <button class="tab-btn active" id="tab-roulette">Roulette</button>
+        <button class="tab-btn" id="tab-historique">Historique</button>
       </div>
+    </div>
 
-      <div id="main">
+    <div id="layout">
+      <div id="section-roulette">
+        <div id="slot-side">
+          <div id="slot-frame"></div>
+          <button id="btn">▶ LANCER LA ROULETTE ◀</button>
+        </div>
         <div id="card">
+          <span class="card-corner tl">✦</span>
+          <span class="card-corner tr">✦</span>
+          <span class="card-corner bl">✦</span>
+          <span class="card-corner br">✦</span>
+          <p id="card-header">✦ CARTE DU JOUR ✦</p>
           <img id="pokemon-image" />
           <p id="pokemon-name"></p>
           <p id="pokemon-type"></p>
+          <div class="card-line"></div>
           <p id="pokemon-message"></p>
+          <p class="card-stars">✦ ✦ ✦</p>
         </div>
       </div>
+      <div id="section-historique">
+        <div id="history-grid"></div>
+      </div>
     </div>
+
     <div id="footer">
-      <p>Pokémon Fortune © 2026</p>
+      <p>Pokémon Fortune © 2003</p>
     </div>
     <script src="script.js"></script>
   </body>

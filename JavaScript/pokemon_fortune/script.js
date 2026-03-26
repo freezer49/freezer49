@@ -4,8 +4,8 @@ const picture = document.querySelector("#pokemon-image");
 const pokemonName = document.querySelector("#pokemon-name");
 const type = document.querySelector("#pokemon-type");
 const message = document.querySelector("#pokemon-message");
-
-console.log(throwButton, picture, pokemonName, type, message);
+const slotframe = document.querySelector("#slot-frame");
+console.log(throwButton, picture, pokemonName, type, message, slotframe);
 
 // Génèrer un ID aléatoire et fetch le pokémon
 
@@ -22,11 +22,7 @@ async function getRandomPokemon() {
     }
     const data = await response.json();
     console.log(data.name);
-    pokemonName.textContent = data.name;
-    type.textContent = data.types[0].type.name;
-    message.textContent = messages[randomId.toString()];
-    picture.src = data.sprites.other["official-artwork"].front_default;
-    throwButton.disabled = false;
+    startSlot(data);
     return data;
   } catch (error) {
     // affiche le message d'erreur dans la console
@@ -49,3 +45,30 @@ async function loadMessages() {
   return data;
 }
 loadMessages();
+
+function startSlot(finalData) {
+  slotframe.innerHTML = "";
+  // 1. crée une img et injecte-la dans slot-frame
+  const slotImg = document.createElement("img");
+  slotframe.appendChild(slotImg);
+
+  // 2. setInterval change le src toutes les 100ms
+  const interval = setInterval(() => {
+    const randomId = Math.floor(Math.random() * 898) + 1;
+    slotImg.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${randomId}.png`;
+  }, 100);
+
+  // 3. setTimeout arrête le défilement après 2 secondes
+  setTimeout(() => {
+    clearInterval(interval);
+    slotImg.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${finalData.id}.png`;
+    pokemonName.textContent = finalData.name;
+
+    // 4. affiche le vrai pokémon
+    pokemonName.textContent = finalData.name;
+    type.textContent = finalData.types[0].type.name;
+    message.textContent = messages[finalData.id.toString()];
+    picture.src = finalData.sprites.other["official-artwork"].front_default;
+    throwButton.disabled = false;
+  }, 2000);
+}
